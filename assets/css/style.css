@@ -1,4 +1,4 @@
-/* ================= БАЗОВІ СТИЛІ ================= */
+/* ================= BASE STYLES ================= */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #222831; 
@@ -10,7 +10,7 @@ figure.card {
     margin: 0;
 }
 
-/* ================= МАКЕТ ТА СТРУКТУРА ================= */
+/* ================= STRUCTURE ================= */
 body.home-page {
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ h1.card-title {
     margin: 30px 0;
 }
 
-/* ================= НАВІГАЦІЯ ================= */
+/* ================= NAVIGATION ================= */
 .nav-list {
     list-style: none;
     margin: 30px 0 0 0;
@@ -59,7 +59,7 @@ h1.card-title {
     background-color: #007a80;
 }
 
-/* ================= ФОРМА ТА КНОПКИ ================= */
+/* ================= FORM AND BUTTONS ================= */
 .container {
     text-align: center;
     background: #393E46;
@@ -110,7 +110,7 @@ button:hover {
     transform: translateY(-2px); 
 }
 
-/* ================= ТАБЛИЦЯ ================= */
+/* ================= TABLE ================= */
 .tarot-info-table {
     width: 90%;
     max-width: 800px;
@@ -137,7 +137,7 @@ button:hover {
     background-color: #4e5561;
 }
 
-/* ================= МЕДІА (ВІДЕО) ================= */
+/* ================= MEDIA ================= */
 .media-section {
     text-align: center;
     margin: 30px 0 50px 0;
@@ -149,7 +149,7 @@ button:hover {
     border-radius: 10px;
 }
 
-/* ================= ГАЛЕРЕЯ КАРТ ================= */
+/* ================= CARD GALLERY ================= */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -172,4 +172,30 @@ button:hover {
     text-align: center;
     font-weight: bold;
     margin-top: 10px;
+}
+
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.mystic-loader {
+    border: 4px solid #393E46;
+    border-top: 4px solid #00ADB5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
